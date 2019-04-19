@@ -1,0 +1,12 @@
+<? xml version = "1.0" ?>
+<? xml-stylesheet type = "text / xsl" href = "plugins.xsl" ?>
+<plugins >
+ <pyqgis_plugin name = "pyhat" version = "0.1" >
+   <description > Use of PyHAT Algorithms through QGIS </ description >
+   <homepage > https://github.com/tthatcher95/QGIS_Plugins/tree/master/PyHAT </ homepage >
+   <qgis_minimum_version > 3.4 </ qgis_minimum_version >
+   <file_name > pyhat_QGIS </ file_name >
+   <author_name > USGS-Astrogeology </ author_name >
+   <download_url > https://github.com/tthatcher95/QGIS_Plugins/blob/master/pyhat_QGIS.zip </ download_url >
+ </ pyqgis_plugin >
+</ plugins >
