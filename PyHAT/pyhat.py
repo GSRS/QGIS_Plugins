@@ -39,13 +39,16 @@ from plio.io import io_moon_minerology_mapper as iomm
 from libpyhat.derived.m3 import pipe, supplemental, ip, new
 from libpyhat.derived.crism import crism_algs
 from unittest import mock
+import inspect
+import os
+
+
 
 
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
 from .pyhat_dialog import PyhatDialog
-import os
 from pathlib import Path
 
 # Grabs the home directory by default
@@ -289,12 +292,11 @@ class Pyhat:
 
         try:
             img.spatial_reference
-            img_tiff = array_to_raster(modified_img, new_filepath, bittype='GDT_Float32',
-                                       geotransform=img.geotransform, projection=img.spatial_reference)
+            array_to_raster(modified_img, new_filepath, bittype='GDT_Float32',
+                                       projection=img.spatial_reference)
         except:
             # Writes the tiff to the user specified location
-            img_tiff = array_to_raster(modified_img, new_filepath, bittype='GDT_Float32',
-                                       geotransform=img.geotransform)
+            array_to_raster(modified_img, new_filepath, bittype='GDT_Float32')
 
         # Grabs the new tiff and adds it into QGIS
         self.iface.addRasterLayer(new_filepath, new_filename)
