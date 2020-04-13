@@ -33,9 +33,8 @@ import numpy as np
 
 from functools import partial
 from plio.io.io_gdal import array_to_raster
-from plio.io.io_moon_minerology_mapper import open as m3_open
-from plio.io.io_crism import open as crism_open
-from plio.io import io_moon_minerology_mapper as iomm
+from libpyhat.io.io_crism import open as crism_open
+from libpyhat.io.io_moon_mineralogy_mapper import open as m3_open
 from libpyhat.derived.m3 import pipe, supplemental, ip, new
 from libpyhat.derived.crism import crism_algs
 from unittest import mock
